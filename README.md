@@ -12,7 +12,7 @@ Welcome to the official code repository for "[EAQuant: Enhancing Post-Training Q
 ## 👀 Introduction
 ![eaquant](imgs/eaquant.png)
 
-- EAQuant proposes (1) expert-aware smoothing aggregation to suppress activation outliers and stabilize quantization, (2) router logits distribution alignment to preserve expert selection consistency post-quantization, and (3) expert-level calibration data balance to optimize sparsely activated experts.
+- EAQuant proposes (1) Expert-Aware Smoothing Aggregation to suppress activation outliers and stabilize quantization, (2) Expert-Aware Routing Consistency Alignment to preserve expert selection consistency post-quantization, and (3) Expert-Aware Calibration Data Balance to optimize sparsely activated experts.
 - EAQuant establishs new **state-of-the-art** baselines for 4-bit weight-activation quantization across various model types and downstream tasks.
 
 
@@ -44,6 +44,8 @@ The bash script for `EAQuant` can be found in `run.sh`. You can choose the model
 - `--router_abits`: activation quantization bits of the gate layer.
 - `--smooth`: suppress activation outliers with mathematical equivalence transformations.
 - `--fc1_scale_merge`: expert-aware smoothing aggregation strategy.
+- `--a_dynamic_method`: the dynamic_method of activation.
+- `--w_dynamic_method`: the dynamic_method of weight.
 - `--router_w_dynamic_method`: the dynamic_method of the gate layer's weight.
 - `--expert_token_num_ratio`: the ratio of expect expert_token_num over average expert_token_num.
 - `--swc`: the ratio of weight clipping (enable without LWC operation).
@@ -68,11 +70,14 @@ We thank the authors for their code.
 ## 📝 Citation
 We kindly request that you cite our work if you utilize the code or reference our findings in your research:
 <!-- Please cite our work if you use our code or discuss our findings in your own research: -->
-```
-@article{fu2025eaquant,
-  title={EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization},
-  author={Fu, Zhongqian and Ding, Ning and Han, Kai and Yu, Xianzhi and Li, Xiaosong and Chen, Xinghao and Tang, Yehui and Wang, Yunhe},
-  journal={arXiv preprint arXiv:2506.13329},
-  year={2025}
+```bibtex
+@misc{fu2026eaquantenhancingposttrainingquantization,
+      title={EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization}, 
+      author={Zhongqian Fu and Tianyi Zhao and Ning Ding and Xianzhi Yu and Xiaosong Li and Yehui Tang and Yunhe Wang},
+      year={2026},
+      eprint={2506.13329},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.13329}, 
 }
-
+```
