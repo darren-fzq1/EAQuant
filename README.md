@@ -13,8 +13,7 @@ Welcome to the official code repository for "[EAQuant: Enhancing Post-Training Q
 ![eaquant](imgs/eaquant.png)
 
 - EAQuant proposes (1) Expert-Aware Smoothing Aggregation to suppress activation outliers and stabilize quantization, (2) Expert-Aware Routing Consistency Alignment to preserve expert selection consistency post-quantization, and (3) Expert-Aware Calibration Data Balance to optimize sparsely activated experts.
-- EAQuant establishs new **state-of-the-art** baselines for 4-bit weight-activation quantization across various model types and downstream tasks.
-
+- EAQuant establishs new **state-of-the-art** baselines for several extreme quantization settings (e.g., W4A4/W3A4/W3A3/W2A4) across various model types and downstream tasks.
 
 
 ## 🔧 Installation
