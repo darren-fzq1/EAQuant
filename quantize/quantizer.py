@@ -448,7 +448,7 @@ class UniformAffineQuantizer(nn.Module):
         xmax_ori =  x.amax(reduce_shape, keepdim=True).to(x.device)
 
         loop_times = 100
-        bottom_bound = 0.65
+        bottom_bound = 0.35
         ratio_list = torch.ones_like(xmax_ori)
         scale_list = torch.ones_like(xmax_ori)
         best_score_list = torch.ones_like(xmax_ori) * 100000
